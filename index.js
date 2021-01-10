@@ -1,5 +1,5 @@
 const dropboxLink = "https://www.dropbox.com/s/3epmnxwhrnk7lgd/Bodea%20Brochure.pdf?dl=0";
-const clientId = "e800d12fc12c4d60960778b2bc4370af";
+const clientId = "2eaddfabef504e0cbf423904d945d124";
 const viewerOptions = {
     embedMode: "FULL_WINDOW",
     defaultViewMode: "FIT_PAGE",
