@@ -1,4 +1,4 @@
-const dropboxLink = "https://www.dropbox.com/s/4xs93ow8li7elwz/Effective%20Modern%20C%2B%2B%2042%20Specific%20Ways%20to%20Improve%20Your%20Use%20of%20C%2B%2B11%20and%20C%2B%2B14%20by%20Scott%20Meyers%20%28z-lib.org%29.pdf?dl=0";
+const dropboxLink = "https://www.dropbox.com/s/j7mojb977guqk7w/CloudComputing3.pdf?dl=0";
 const clientId = "2eaddfabef504e0cbf423904d945d124";
 const viewerOptions = {
     embedMode: "FULL_WINDOW",
