@@ -1,22 +1,834 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cloud Computing</title>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1"/>
-    <style>body {
-        width: 100%;
-        height: 100vh;
-        overflow-x: hidden;
-        margin: 0;
-        background-color: black;
-    }
-    </style>
-    <script type="text/javascript" src="index.js"></script>
+	<title>Cloud Computing</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
 </head>
-<body style="margin: 100px 0 100px 200px;">
-    <div id="embeddedView" style="width: 800px; box-shadow: 1px 1px 10px 1px #dadada;"></div>
-    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+<body>
+    <header>
+        <div class="toggle" id="push">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+        <a class="logo" href="index.html">Cloud Computing</a>
+        <nav id="navigation" class="inactive">
+            <ul>
+                <li><a href="#banner">Home</a></li>
+                <li class="dropdown">
+                    <button class="dropButton" onclick="rollDown()">Cloud Computing 
+                        <i class="fas fa-caret-down" style="width: 10px"></i>
+                    </button>
+                    <div id="myDropdown" class="dropdownContent">
+                        <a href="#tl">Evolution</a>
+                        <a href="#types">Types</a>
+                        <a href="#services">Services</a>
+                        <a href="#platform">Platforms</a>
+                        <a href="#benefits">Advantages</a>
+                        <a href="#note">Aspects</a>
+                        <a href="cloudComputing.html">Breakthroughs</a>
+                    </div>
+                </li>
+                <li><a href="#about"> About us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="banner" class="banner">
+        <div class="inner">
+            <div class="content">
+                <h1 style="font-size: 4em">CLOUD COMPUTING</h1>
+                <CENTER><ul class="actions" style="margin-top: 1.5em">
+                    <div class="btn">
+                        <a class="first-link" href="#definitions">
+                            Get Started
+                        </a>
+                        <a href="#definitions">
+                            <i class="arrow down"></i>
+                        </a>
+                    </div>    
+                </ul></CENTER>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <div id="scroll">
+        <button id="scrollBack" title="Go to top" style="border: none;">
+            <i class="arrow up"></i>
+        </button>
+    </div>
+
+    <section id="definitions" class="section" style="margin-top: 6em; margin-bottom: 6em">
+        <div class="container">
+            <div class="frame">
+                <div id="textDef">
+                    <div class="title" style="margin-top: 0;">
+                        <h1 style="text-align: left;">WHAT IS CLOUD COMPUTING ?</h1>
+                    </div>
+                    <div class="content">
+                        Cloud Computing is an Internet-based computational resource delivery, where computing services are provided to customers on demand through the Internet. These services include servers, data storage, databases, networking, software and more development tools and applications.
+                    </div>
+                </div>
+
+                <div class="image">
+                    <img src="./images/cloud1.png" id="cloudImg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="tl" class="" style="margin-bottom: none;">
+        <div class="container">
+            <div class="frame" style="border: none;">
+                <div class="title">
+                    <h1>EVOLUTION OF CLOUD COMPUTING</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="timeline">
+
+    <section id="timeline" class="timelineContain" style="margin-top: 0;">
+        <div class="timelineBlock">
+            <div class="icon"></div>
+            <div class="timelineContent">
+                <h2>Mainframe Computing</h2>
+                <p>Mainframe computer which first came into existence in 1951 was high-performance computer, it was responsible for handling large data.<span id="dots0">..</span><span id="more0" class="more"> It allowed multiple users to access a central computer through access points or terminals. However, due to the costs of purchasing and maintaining a mainframe computer, Mainframe Computing is not practical for many people or organizations at that time</span></p>
+                <button onclick="readMore(this.name)" id="myBtn0" name="0">Read more</button>
+            </div>
+        </div> 
+
+        <div class="timelineBlock">
+            <div class="icon"></div> 
+            <div class="timelineContent">
+                <h2>Virtualization</h2>
+                <p>Before Cluster Computing was developed. The concepts of virtualization was introduced. It is the process of running a virtual instance of a computer<span id="dots1">...</span><span id="more1" class="more">, an operating system, a storage device or any other computing resource in an abstracted layer over existing operating system and hardware. It is a key technology used in Cloud Computing. It is thebasis of major Cloud Computing services nowadays.</span></p>
+                <button onclick="readMore(this.name)" id="myBtn1" name="1">Read more</button>
+            </div> 
+        </div> 
+
+        <div class="timelineBlock">
+            <div class="icon"></div> 
+            <div class="timelineContent">
+                <h2>Cluster Computing</h2>
+                <p>In 70s and 80s of nineteenth century, Cluster Computing came as an alternative to Mainframe Computing.<span id="dots2">..</span><span id="more2" class="more"> Cluster Computing is the process of sharing the computation tasks among multiple computers or machines in the cluster through the connection between them.</span></p>
+                <button onclick="readMore(this.name)" id="myBtn2" name="2">Read more</button>
+            </div>
+        </div> 
+
+        <div class="timelineBlock">
+            <div class="icon"></div> 
+            <div class="timelineContent">
+                <h2>Grid Computing</h2>
+                <p>In the 1990s, a new model was presented, that was Grid Computing. It is an architecture that combines many computers placed at entirely different locations<span id="dots3">...</span><span id="more3" class="more"> and these all are connected via the Internet. This removed the geographical restrictions between computers in the network. But another problem emerged, that was low availability of high bandwidth led to unstable connection in the network.</span></p>
+                <button onclick="readMore(this.name)" id="myBtn3" name="3">Read more</button>
+            </div> 
+        </div> 
+
+        <div class="timelineBlock">
+            <div class="icon"></div> 
+            <div class="timelineContent">
+                <h2>Web 2.0</h2>
+                <p>Web 2.0 is the interface through which the Cloud Computing services interact withthe clients.<span id="dots4">..</span><span id="more4" class="more"> It was because of Web 2.0 that led to the improvement of many web pages, increased the flexibility among them and especially the growth of social media, which isvery popular nowadays.</span></p>
+                <button onclick="readMore(this.name)" id="myBtn4" name="4">Read more</button>
+            </div> 
+        </div> 
+
+        <div class="timelineBlock">
+            <div class="icon"></div> 
+            <div class="timelineContent">
+                <h2>Service Orientation</h2>
+                <p>Service Orientation (or Service-oriented Computing (SoC)) is a design paradigm for computer software in the form of services.<span id="dots5">..</span><span id="more5" class="more"> It’s the core reference model for Cloud Computing systems focus on designing and delivering the best possible service for customers by application components, through a communication protocol over a network. Two important concepts were introduced in this computing model. These were Quality of Service(QoS) and Software as a Service (SaaS).</span></p>
+                <button onclick="readMore(this.name)" id="myBtn5" name="5">Read more</button>
+            </div> 
+        </div> 
+
+        <div class="timelineBlock">
+            <div class="icon"></div> 
+            <div class="timelineContent">
+                <h2>Utility Computing</h2>
+                <p>Utility Computing is a model in which, through pay-per-use method, customers are provided with computing<span id="dots6">...</span><span id="more6" class="more"> resources and infrastructure management as needed with charge for specific usage rather than a flat rate. It's one of the components that make up modern-day Cloud Computing.</span></p>
+                <button onclick="readMore(this.name)" id="myBtn6" name="6">Read more</button>
+            </div> 
+        </div> 
+
+        <div class="timelineBlock">
+            <div class="icon"></div> 
+            <div class="timelineContent">
+                <h2>Cloud Computing</h2>
+                <p>In 1997, one of the first definitions of Cloud Computing came from Professor Ramnath Chellappa<span id="dots7">...</span><span id="more7" class="more"> of Emory University and the University of South California. Cloud Computing was defined as “computing paradigm where the boundaries of computing will be determined by economic rationale rather than technical limits alone.”</span></p>
+                <button onclick="readMore(this.name)" id="myBtn7" name="7">Read more</button>
+            </div> 
+        </div> 
+    </section>  
+
+    <section id="tl" class="" style="margin-bottom: none;">
+        <div class="container">
+            <div class="frame" style="border: none;">
+                <div class="content">
+                    <h1>MODERN-DAY CLOUD COMPUTING</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="Htimeline">
+        <ol>
+            <li>
+                <div>
+                    <time>The Inception</time>The inception of the modern-day cloud was realised by Amazon Web Services (AWS)
+                        launching its public cloud in 2002. While more websites and workflows were starting to find a place in the cloud, the next
+                        decade saw two generations of the cloud.
+                </div>
+            </li>
+            <li>
+                <div>
+                    <time>The First Generation</time> The traditional definition of what the cloud is was realised during the first generation -
+                        centralised infrastructure in data centres that host a lot of compute and storage resources.
+                        There are several milestones in the first generation cloud.
+                </div>
+                </li>
+            <li>
+                <div>
+                    <time>The Second Generation</time> Building base on the first generation cloud, the secondmake a dramatic improvement
+                        in both the services and competition between a wide choice of providers
+                </div>
+            </li>
+            <li>
+                <div>
+                    <time>Cloud Computing Today</time> Cloud Computing has matured over the past decades at both consumer and enterprise
+                        levels. With the advent of the Internet of Things era, billions of devices are connected
+                        to the Internet. And more
+                        development and applications must be made to fulfil the need of the massive number of
+                        users
+                </div>
+            </li>
+            <li></li>
+        </ol>
+    </section>
+
+    <hr>
+
+    <section id="types" class="section" style="margin-bottom: 4em">
+        <div class="container">
+            <div class="frame" style="border: none;display: block;">
+                <div class="title">   
+                    <h1 style="text-align: center;">TYPES OF CLOUD COMPUTING</h1>
+                </div>
+                <div class="content" style="margin-top: 2em; width: 100%;">
+
+                    <div class="services">
+                        <div><img src="./images/public.png" width="150px" height="150px"></div>
+                        <div>
+                            <div>
+                                <p>Public Cloud</p>
+                            </div>
+                            <div>
+                                The public cloud is defined as the cloud computing services provided by third-party
+                                providers via the public Internet, which is available to anyone who needs to use and
+                                pay for them. They can be free or sold on-demand, allowing customers to purchase only
+                                per usage for the resources they consume.<span id="dots10">..</span><span id="more10" class="more"> Public cloud have more fast deployment than
+                                on-premises infrastructures and with an easily scalable platform. The security of public
+                                cloud has been concerned over public cloud environments, however, if the provider uses
+                                appropriate security methods, the public cloud can be as secure as managed private cloud
+                                implementation. </span>
+                            </div>
+                            <button onclick="readMore(this.name)" id="myBtn10" name="10" style="margin-top: 1em;">Read more</button>
+                        </div>
+                    </div>
+
+                    <div class="services">
+                        <div><img src="./images/private.png" width="150px" height="150px"></div>
+                        <div>
+                            <div>
+                                <p>Private Cloud</p>
+                            </div>
+                            <div>
+                                The private cloud (internal cloud or corporate cloud) is defined as computing services
+                                offered either over the Internet or a private internal network and only users allowed can access it. The private cloud offers cloud computing resources used only by a single business
+                                or organization.<span id="dots11">..</span><span id="more11" class="more"> Private cloud gives businesses many benefits – involves in self-service,
+                                scalability, and elasticity - with the additional control and customization available from
+                                dedicated resources over a computing infrastructure hosted on-premises. Furthermore, a
+                                higher level of security and privacy is delivered through both company firewalls and internal hosting so that third-party providers cannot get access to sensitive data. However,
+                                private cloud require the same staffing, management, and maintenance expenses as traditional datacenter because the company’s IT department is accountable for the cost and
+                                managing the private cloud. </span>
+                            </div>
+                            <button onclick="readMore(this.name)" id="myBtn11" name="11" style="margin-top: 1em;">Read more</button>
+                        </div>
+                    </div>
+
+                    <div class="services">
+                        <div><img src="./images/hybrid.png" width="150px" height="150px"></div>
+                        <div>
+                            <div>
+                                <p>Hybrid Cloud</p>
+                            </div>
+                            <div>
+                                Hybrid cloud is defined as a computing environment which combines public and private clouds and data and applications are allowed to be shared between them. When an
+                                on-premises datacenter’s capabilities cannot satisfy the computing and processing requirement, businesses can use the cloud to immediately scale capacity up.<span id="dots12">..</span><span id="more12" class="more"> They can also scale
+                                capacity down in order to handle excess capacity. It allows them to save the time and cost
+                                of purchasing, installing, and maintaining new servers when they don’t need to use.
+                                </span>
+                            </div>
+                            <button onclick="readMore(this.name)" id="myBtn12" name="12" style="margin-top: 1em;">Read more</button>
+                        </div>
+                    </div>
+
+                    <div class="services">
+                        <div><img src="./images/connection.png" width="150px" height="150px"></div>
+                        <div>
+                            <div>
+                                <p>Community Cloud</p>
+                            </div>
+                            <div>
+                                Although not as commonly used as the other three models, Community Cloud is
+                                a multi-tenant platform that shares infrastructure between several organizations within
+                                the same industry or field with specific concerns in terms of security, compliance, and
+                                performance.<span id="dots13">..</span><span id="more13" class="more">
+                                In essence, a community cloud is a private cloud acts as much like a public cloud. The
+                                number of users is more than private, but not as much as public cloud. The platform is
+                                managed privately but the services are commonly used by government agencies, healthcare
+                                organizations, financial services firms, and other professional communities. </span>
+                            </div>
+                            <button onclick="readMore(this.name)" id="myBtn13" name="13" style="margin-top: 1em;">Read more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="services" class="section" style="margin-bottom: 4em">
+        <div class="container">
+            <div class="frame" style="border: none;display: block;">
+                <div class="title">   
+                    <h1 style="text-align: center;">CLOUD SERVICES</h1>
+                </div>
+                <div class="content" style="margin-top: 2em; width: 100%;">
+                    <div class="infras"></div>
+
+                    <div class="services">
+                        <div><img src="./images/iaas.png"></div>
+                        <div>
+                            <div>
+                                <p>Infrastructure as a Service (IaaS)</p>
+                            </div>
+                            <div>
+                                IaaS is a cloud computing service model that delivers fundamental infrastructure elements to consumers on-demand, over the internet, and on a pay-as-you-go basis. These
+                                infrastructure elements include compute, network, storage hardware as well as other components and software. IaaS enables end users to scale and shrink resources on an as-needed
+                                basis, instead of buying all the servers and equipment for storage and networking, users
+                                can outsource the resource from a third-party provider, so that unnecessary infrastructure is reduced.
+                                <span id="dots14"></span>
+                                <span id="more14" class="more">
+                                    <ul>
+                                        <li>
+                                            Reduce expenses: businesses only purchase for what they want to use. Buying,
+                                            managing and maintaining their infrastructure are service providers’ responsibility.
+                                        </li>
+                                        <li>
+                                            Improve business continuity: IaaS provides a higher proportion of operation
+                                            time and more disaster recovery options than on-premises deployments.
+                                        </li>
+                                        <li>
+                                            Accelerate innovation: IaaS makes it easy and fast for businesses to ramp up
+                                            their infrastructure and scale up or down if they need.
+                                        </li>
+                                        <li>
+                                            Take advantages of the latest technologies: Many cloud providers promptly
+                                            update their new software and hardware including artificial intelligence and machine
+                                            learning frameworks.
+                                        </li>
+                                        <li>
+                                            Speed provisioning: with IaaS, application environments are entirely offered in a
+                                            short time
+                                        </li>
+                                        <li>
+                                            Focus on core business: organizations can give DevOps and other teams permission to access their infrastructure. Therefore, they will be able to test and fix
+                                            immediately without postponement.
+                                        </li>
+                                        <li>
+                                            Scale faster: More resources are required by companies during peak workloads.
+                                            However, the infrastructure can scale quickly with the support of IaaS.
+                                        </li>
+                                    </ul>  
+                                </span>
+                            </div>
+                            <button onclick="readMore(this.name)" id="myBtn14" name="14" style="margin-top: 1em;">Read more</button>
+                        </div>
+                    </div>
+
+                    <div class="services">
+                        <div><img src="./images/paas.png"></div>
+                        <div>
+                            <div>
+                                <p>Platform as a Service (PaaS)</p>
+                            </div>
+                            <div>
+                                PaaS provides the infrastructure and middleware components that give developers, IT
+                                administrators, and end users permission to build, develop and manage mobile and web
+                                applications.
+                                PaaS offers ready-to-use programming components that involve in many advanced
+                                technologies such as artificial intelligence (AI), Internet of Things (IoT), blockchain. They
+                                enable developers to add new features to their applications. Application development
+                                tools are also included to assist the creation of mobile and web software. For example,
+                                Kubernetes, Android Studio, Xamarin, etc.
+                                <span id="dots15"></span>
+                                <span id="more15" class="more">
+                                    <ul>
+                                        <li>
+                                            IT efficiency: PaaS increases resources delivery, intensify automation, provide scalability and standardizes deployments.
+                                        </li>
+                                        <li>
+                                            Business innovation: PaaS enable IT to be more responsive to business chance
+                                            such as improve user experiences, more trusted transactions, faster release cycles
+                                            and data analytics.
+                                        </li>
+                                        <li>
+                                            Risk reduction: PaaS strengthens security, quickens responses and decreases downtime whereas prevents data loss and recovers data.
+                                        </li>
+                                    </ul>  
+                                </span>
+                            </div>
+                            <button onclick="readMore(this.name)" id="myBtn15" name="15" style="margin-top: 1em;">Read more</button>
+                        </div>
+                    </div>
+
+                    <div class="services">
+                        <div><img src="./images/saas.png"></div>
+                        <div>
+                            <div>
+                                <p>Software as a Service (SaaS)</p>
+                            </div>
+                            <div>
+                                Software as a service (SaaS) is a cloud-based software delivery model where cloud application software is developed and maintained, updated automatically and always available
+                                to its customers via the internet on a pay-as-you-go basis by the cloud provider. Users
+                                don’t need to manage the hardware, middleware and security. Therefore, SaaS customers
+                                can significantly lower their costs. 
+                                <span id="dots16"></span>
+                                <span id="more16" class="more">
+                                    <ul>
+                                        <li>
+                                            Lower up front costs: SaaS Customers don’t need extra hardware or middleware,
+                                            so that it lowers the installation and implementation costs.
+                                        </li>
+                                        <li>
+                                            Predictable ongoing costs: get rid of unpredictable costs of managing, patching,
+                                            and updating
+                                        </li>
+                                        <li>
+                                            Rapid deployment: with SaaS, users will get the latest innovations and updates.
+                                            Software will be patched automatically.
+                                        </li>
+                                        <li>
+                                            On-demand scalability: SaaS offers immediate scalability to satisfy growing data
+                                            or transactional demands.
+                                        </li>
+                                    </ul>  
+                                </span>
+                            </div>
+                            <button onclick="readMore(this.name)" id="myBtn16" name="16" style="margin-top: 1em;">Read more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="platform" class="section" style="margin-bottom: 4em">
+        <div class="container">
+            <div class="frame" style="border: none;display: block;">
+                <div class="title">   
+                    <h1 style="text-align: center;">CLOUD PLATFORMS</h1>
+                </div>
+                <div class="content" style="margin-top: 2em; width: 100%;">
+
+                    <div class="services">
+                        <div><img src="./images/frontend.png" width="200px" height="200px"></div>
+                        <div>
+                            <div>
+                                <p>Front-End Platform</p>
+                            </div>
+                            <div>
+                                The front-end infrastructure comprises of what the users interact with. It is combination of various components that offer the user interface. The front-end cloud infrastructure
+                                mainly consists of local networks, web browsers, and web applications.
+                                <span id="dots8"></span>
+                                <span id="more8" class="more">
+                                    <ul>
+                                        <li>
+                                            User Interface: It is everything that end-user access in order to interact with the
+                                            cloud. Notable examples of cloud-based UIs are Gmail, Google Drive.
+                                        </li>
+                                        <li>
+                                            Software: It is the software that runs on the user’s end. Front-end software primarily comprises of client-side applications and browsers.
+                                        </li>
+                                        <li>
+                                            Client Device or Network: This comprises of the equipment at the user’s end,
+                                            such as PC or mobile devices. However, they are not required to be capable of
+                                            processing heavy computations since it is the cloud’s responsibility
+                                        </li>
+                                    </ul>  
+                                </span>
+                                <button onclick="readMore(this.name)" id="myBtn8" name="8" style="margin-top: 1em;">Read more</button>
+                            </div>
+                        </div>  
+                    </div>
+
+                    <div class="services">
+                        <div><img src="./images/backend.png" width="200px" height="200px"></div>
+                        <div>
+                            <div>
+                                <p>Back-End Platform</p>
+                            </div>
+                            <div>
+                                The back-end architecture is the engine for the front-end infrastructure. It includes
+                                hardware and storage located on a remote server of the cloud service providers.
+                                <span id="dots9"></span>
+                                <span id="more9" class="more">
+                                    <ul>
+                                        <li>
+                                            Application: It refers to the user interface that sends queries from the end-users.
+                                            In short, it is a back-end layer that takes care of the user’s requests.
+                                        </li>
+                                        <li>
+                                            Service: The service handles the computations and tasks that runs on the Cloud
+                                            Computing system. Service executes the tasks on the cloud run-time.                                    
+                                        </li>
+                                        <li>
+                                            Storage: It is where data is stored on the cloud. In a Cloud Computing system,
+                                            in order to run services, the software partitions the storage drives such as SSD and
+                                            HDD
+                                        </li>
+                                        <li>
+                                            Infrastructure: The infrastructure includes CPU, GPU, network cards, accelerator
+                                            cards, etc, in order to power all the services running on the cloud.
+                                        </li>
+                                        <li>
+                                            Management: It includes software that allocates resources between tasks in order
+                                            to maintain efficiency in the cloud servers. In short, it is the software that coordinate
+                                            between the front-end and the back-end.
+                                        </li>
+                                        <li>
+                                            Security: It is one of the key aspect of the back-end architecture. Back-ups and
+                                            firewalls are two of the crucial parts of the security implementations of the cloud
+                                            system.
+                                        </li>
+                                    </ul> 
+                                </span>
+                                <button onclick="readMore(this.name)" id="myBtn9" name="9" style="margin-top: 1em;">Read more</button> 
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="benefits" class="section" style="margin-bottom: 4em">
+        <div class="container">
+            <div class="frame" style="border: none;display: block;">
+                <div class="title">   
+                    <h1 style="text-align: center;">ADVANTAGES</h1>
+                </div>
+                <div id="ad" class="content" style="margin-top: 2em; width: 100%;">
+                    <div class="services">
+                        <div><img src="./images/economical.png" width="100px" height="100px"></div>
+                        <div>
+                            <div>
+                                <p>Economical</p>
+                            </div>
+                            <div>
+                                This is a great advantage of Cloud Computing that businesses can
+                                save a lot of costs on physical hardware, also, there is no need of large IT teams
+                                solving cloud data center operations, because everything is implemented by Cloud
+                                provider.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services">
+                        <div><img src="./images/performance.png" width="100px" height="100px"></div>
+                        <div>
+                            <div>
+                                <p>High Performance</p>
+                            </div>
+                            <div>
+                                Cloud computing allows users to perform service operations
+                                quickly with just a few clicks to get the necessary resources almost instantly.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services">
+                        <div><img src="./images/upgrade.png" width="100px" height="100px"></div>
+                        <div>
+                            <div>
+                                <p>Flexibility</p>
+                            </div>
+                            <div>
+                                Cloud computing allows online access via smartphones and devices,
+                                this feature ensures work continuity when an individual in the company who lives
+                                far away or has a too thick schedule can keep instantly up- to-date with clients and
+                                coworkers.
+                                With just a good internet connection, all the resources will be continuously stored
+                                and synchronized, creating good conditions to save time for IT staff, significantly
+                                reducing the workload.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services">
+                        <div><img src="./images/productivity.png" width="100px" height="100px"></div>
+                        <div>
+                            <div>
+                                <p>Productivity</p>
+                            </div>
+                            <div>
+                                Collaboration have never been easier with the ability to access data and real-time changes instantly with the help of cloud systems.
+                                In addition, it also provides the ability to support employees working in multiple
+                                geographic locations to collaborate effectively with high security.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services">
+                        <div><img src="./images/backup.png" width="100px" height="100px"></div>
+                        <div>
+                            <div>
+                                <p>Easy Management and Backup</p>
+                            </div>
+                            <div>
+                                Enterprises today are very concerned
+                                with their sensitive information, so Cloud has brought a great benefit by making it
+                                easy to know which users with which level can access what kind of data.
+                                Although with excellent data storage and security, there may still be emergencies
+                                such as your computer crashing or unexpected power outages, Cloud-based services
+                                offer data backup feature which prevents unwanted data loss.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services">
+                        <div><img src="./images/integration.png" width="100px" height="100px"></div>
+                        <div>
+                            <div>
+                                <p>Automatic Software Integration</p>
+                            </div>
+                            <div>   
+                                With this cloud technology, software applications will be very easy to customize, which helps users choose the type of cloud
+                                service that suits their needs.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services">
+                        <div><img src="./images/security.png" width="100px" height="100px"></div>
+                        <div>
+                            <div>
+                                <p>Data Security</p>
+                            </div>
+                            <div>   
+                                Cloud storage providers already have basic and essential protections such as authentication, access control, and encryption in place. For added
+                                security, third-party services that offers cloud security are needed to prevent intrusion into their sensitive information in the cloud.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="note" class="section" style="margin-bottom: 4em">
+        <div class="container">
+            <div class="frame" style="border: none;display: block;">
+                <div class="title">   
+                    <h1 style="text-align: center;">NOTEWORTHY ASPECT</h1>
+                </div>
+                <div class="content" style="margin-top: 2em; width: 100%;">
+                    <div class="services">
+                        <div><img src="./images/provider.png" width="150px" height="150px"></div>
+                        <div>
+                            <div>
+                                <p>Cloud Providers</p>
+                            </div>
+                            <div>   
+                                To get the best reliability and performance for ones business, it’s important to have a
+                                good understanding of the cloud provider, and that provider must understand the industry
+                                in which you are working. Such knowledge and understanding can make a huge difference.
+                                However, if the cloud carrier is able to encrypt data, they can also do the opposite, so
+                                make sure that Cloud’s provider complies with privacy and security in your industry.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="services">
+                        <div><img src="./images/banwidth.png" width="150px" height="150px"></div>
+                        <div>
+                            <div>
+                                <p>Bandwidth Limitations</p>
+                            </div>
+                            <div>   
+                                Another noteworthy factor is the Cloud’s ability to transmit and recover data over
+                                lines, enterprises always have the need to move data from local networks to a wide area
+                                network and it can takes hours, days, or months. Thus, the cost of bandwidth upgrades
+                                is a factor to consider.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="services">
+                        <div><img src="./images/hacker.png" width="150px" height="150px"></div>
+                        <div>
+                            <div>
+                                <p>Security</p>
+                            </div>
+                            <div>   
+                                Security is one of the key aspect of cloud adoption, measures must be devised in
+                                fending off increasingly complex attacks. Still, cloud security is not simply defensive protocols, it also meant to enable greater agility and growth while ensuring a constant secure
+                                protection.
+                            </div>
+                            <button onclick="readMoreSecurity()" id="security" style="margin-top: 1em;">Read more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="sec" class="section" style="margin-top: 0; display: none;">
+        <hr>
+        <div class="container">
+            <div class="frame" style="border: none;display: block;">
+                <div class="title">   
+                    <h1 style="text-align: center;">SECURITY</h1>
+                </div>
+                <div class="content" style="width: 100%;">
+
+                    <div class="services" style="margin-bottom: 0;">
+                        
+                        <div>
+                            <div style="text-indent: 2.5%">Security is one of the key aspect of cloud adoption, measures must be devised in
+                            fending off increasingly complex attacks. Still, cloud security is not simply defensive protocols, it also meant to enable greater agility and growth while ensuring a constant secure
+                            protection.</div> <br>
+                            <div style="text-indent: 2.5%">Cloud security comprises of services, policies and processes designed to ensure safety
+                            when working with cloud-based operations. Cloud security adopts strategies and protocols in order to deter security threats aimed at cloud data systems of businesses and
+                            organizations. </div><br>
+                            <div style="text-indent: 2.5%">Hence any informational data sent to the cloud must be encrypted to protect the
+                            organization’s critical data.</div>
+                        </div>  
+                    </div>
+
+                    <div class="services" style="margin-top: 0">
+                        <div>
+                            <div>
+                                <p>Risks and Threats</p>
+                            </div>
+                            <div>
+                                <div style="text-indent: 2.5%">Today, there is an increasing trend of cloud migration in small and large enterprises
+                                as it offers near-limitless opportunities for scale and sustainability. However, it also comes
+                                with a wide array of security risks that come in many forms and from both internal and
+                                external sources.</div><br>
+                                <div style="text-indent: 2.5%">The following are some common cloud security threats</div>
+                                <ul>
+                                    <li>
+                                        Data breaches: The expansion of cloud services comes at the cost of security, there
+                                        are numerous ways that cybercriminals can do to access vulnerable and sensitive
+                                        data on the cloud.
+                                    </li>
+                                    <li>
+                                        Malware injections: Another threat comes in the form of malware injection. Malicious scripts of code can be uploaded to a cloud server that hosts various applications and services. When injected, these malwares can be used to infiltrate and
+                                        steal data from organizations that uses the same cloud server. A recent example is
+                                        the SolarWinds hack which saw its software update injected with malware and then
+                                        distributed to various US government agencies.
+                                    
+                                    </li>
+                                    <li>
+                                        Distributed Denial of Service (DDoS): DDoS is another common form of attacks that can happen which may prevent access to the cloud servers and the data
+                                        stored in them. Such delay may cause irreparable damage to the organizations that
+                                        uses cloud data storage.
+                                    </li>
+                                    <li>
+                                        Malicious insiders: Insiders such as employees who have direct access to the system may intentionally steal or even allow outsiders to access the database, which
+                                        poses a serious threat and may result in considerable damage if went undetected.
+                                    </li>
+                                    <li>
+                                        Insecure APIs: Application Programming Interfaces (APIs) is a way for customers
+                                        to access and extract information from their cloud-based services. These APIs can
+                                        leak data and vulnerable to attacks from outsiders if not properly configured.
+                                    </li>
+                                    <li>
+                                        Account hijacking: Accounts that was granted access to the system can be compromised. Sophisticated tools and phishing schemes are used to hijack cloud accounts
+                                        and gain access to sensitive business data.
+                                    </li>
+                                </ul> 
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <hr>
+
+    <section id="breakthrough" class="section" style="margin-bottom: 4em">
+        <div class="container">
+            <div class="frame" style="border: none;">
+                <div id="textDef">
+                    <div class="title">
+                        <button onclick="window.location='cloudComputing.html'"><h1 style="text-align: center;">CLOUD COMPUTING IS CHANGING THE WORLD</h1></button>
+                    </div>
+                    <div class="content">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="about">
+        <div class="wrapper">
+            <h1 style="color: rgba(255,255,255,.7); font-size: 2em">Our Group</h1>
+            <div class="team">
+                <div class="team_member">
+                    <div class="team_img">
+                        <img src="" alt="Team_image">
+                    </div>
+                    <div><h3>Trần Trung Thái</h3></div>
+                </div>
+                <div class="team_member">
+                    <div class="team_img">
+                        <img src="" alt="Team_image">
+                    </div>
+                    <h3>Nguyễn Nhật Nguyên</h3>
+                </div>
+                <div class="team_member">
+                    <div class="team_img">
+                        <img src="" alt="Team_image">
+                    </div>
+                    <h3>Nguyễn Tiến Mạnh</h3>
+                </div>
+                <div class="team_member">
+                    <div class="team_img">
+                        <img src="" alt="Team_image">
+                    </div>
+                    <h3>Lữ Trọng Chính</h3>
+                </div>
+            </div>
+        </div>  
+    </section>
+
+    <script src="main.js"></script>
 </body>
 </html>
