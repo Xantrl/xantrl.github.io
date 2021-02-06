@@ -1,7 +1,7 @@
 const dropboxLink = "https://www.dropbox.com/s/j7mojb977guqk7w/CloudComputing3.pdf?dl=0";
 const clientId = "2eaddfabef504e0cbf423904d945d124";
 const viewerOptions = {
-    embedMode: "IN_LINE",
+    embedMode: "FULL_WINDOW",
     defaultViewMode: "FIT_PAGE",
     showDownloadPDF: true,
     showPrintPDF: false,
